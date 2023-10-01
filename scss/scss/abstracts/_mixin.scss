@@ -1,0 +1,58 @@
+// oddiy mixin
+@mixin reset {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+// sepper mixin
+@mixin displayF {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin footer{
+    gap: 5px;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mainn{
+    font-size: 20px;
+    color: $primary-black-color;
+}
+@mixin pol{
+    font-size: 14px;
+    color: $primary-grey-color;
+}
+
+@mixin footer{
+    @include displayF;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    i {
+      width: 50px;
+      height: 50px;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      background-color: $primary-border-color;
+      &:hover{
+        background-color:#ebebf0;
+        transition: all 0.3s;
+      }
+      &:first-child {
+        background-color: $primary-background-button-color;
+        padding: 10px 14px;
+        width: 70px;
+        height: 50px;
+        @include displayF;
+        justify-content: center;
+      }
+    }
+}
